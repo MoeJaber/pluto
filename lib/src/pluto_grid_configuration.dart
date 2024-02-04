@@ -213,6 +213,7 @@ class PlutoGridStyleConfig {
     this.menuBackgroundColor = Colors.white,
     this.gridBorderColor = const Color(0xFFA1A5AE),
     this.leftBorderColor = Colors.blue,
+    this.borderStop = 0.015,
     this.borderColor = const Color(0xFFDDE2EB),
     this.activatedBorderColor = Colors.lightBlue,
     this.inactivatedBorderColor = const Color(0xFFC4C7CC),
@@ -270,6 +271,7 @@ class PlutoGridStyleConfig {
     this.menuBackgroundColor = const Color(0xFF414141),
     this.gridBorderColor = const Color(0xFF666666),
     this.leftBorderColor = Colors.blue,
+    this.borderStop = 0.015,
     this.borderColor = const Color(0xFF222222),
     this.activatedBorderColor = const Color(0xFFFFFFFF),
     this.inactivatedBorderColor = const Color(0xFF666666),
@@ -375,6 +377,7 @@ class PlutoGridStyleConfig {
   final Color gridBorderColor;
   //Moe
   final Color leftBorderColor;
+  final double borderStop;
 
   /// Set the border color of the widgets inside [PlutoGrid].
   ///
@@ -474,6 +477,7 @@ class PlutoGridStyleConfig {
     Color? menuBackgroundColor,
     Color? gridBorderColor,
     Color? leftBorderColor,
+    double? borderStop,
     Color? borderColor,
     Color? activatedBorderColor,
     Color? inactivatedBorderColor,
@@ -529,6 +533,7 @@ class PlutoGridStyleConfig {
       menuBackgroundColor: menuBackgroundColor ?? this.menuBackgroundColor,
       gridBorderColor: gridBorderColor ?? this.gridBorderColor,
       leftBorderColor: leftBorderColor ?? this.leftBorderColor,
+      borderStop: borderStop ?? this.borderStop,
       borderColor: borderColor ?? this.borderColor,
       activatedBorderColor: activatedBorderColor ?? this.activatedBorderColor,
       inactivatedBorderColor:
@@ -590,6 +595,7 @@ class PlutoGridStyleConfig {
             gridBorderColor == other.gridBorderColor &&
             leftBorderColor == other.leftBorderColor &&
             borderColor == other.borderColor &&
+            borderStop == other.borderStop &&
             activatedBorderColor == other.activatedBorderColor &&
             inactivatedBorderColor == other.inactivatedBorderColor &&
             iconSize == other.iconSize &&
@@ -636,6 +642,7 @@ class PlutoGridStyleConfig {
         gridBorderColor,
         leftBorderColor,
         borderColor,
+        borderStop,
         activatedBorderColor,
         inactivatedBorderColor,
         iconSize,

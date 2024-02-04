@@ -1225,8 +1225,14 @@ class _GridContainer extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
               gradient: LinearGradient(
-                  stops: const [0.015, 0.015],
-                  colors: [style.leftBorderColor, Colors.transparent]),
+                  stops: [
+                    style.borderStop,
+                    style.borderStop
+                  ], //const [0.015, 0.015],
+                  colors: [
+                    style.leftBorderColor,
+                    Colors.transparent
+                  ]),
               borderRadius: const BorderRadius.all(Radius.circular(12.0))),
           child: DecoratedBox(
             decoration: BoxDecoration(
